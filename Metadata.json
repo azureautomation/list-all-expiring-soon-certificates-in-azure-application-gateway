@@ -1,0 +1,20 @@
+{
+    "Author": "s_lapointe",
+    "ContentSize": 1621,
+    "ContentUrl": "https://raw.githubusercontent.com/azureautomation/list-all-expiring-soon-certificates-in-azure-application-gateway/master/Get-AzureAppGatewayExpiringCertificates.ps1",
+    "DownloadCount": 1287,
+    "Id": "List-all-expiring-soon-96c0f4bc",
+    "IsFederated": false,
+    "IsWorkflow": false,
+    "Popularity": 26,
+    "RaterCount": 0,
+    "Rating": 0.0,
+    "ReleaseDate": "2019-10-3T00:00:00",
+    "RunbookKind": 5,
+    "RunbookKindString": "PowerShell",
+    "Summary": "Did you ever had developers or engineers coming to your desk in panic realizing their Azure Application Gateway' certificates expired without them knowing it in advance. Causing them downtime in their release pipeline, dev or worst, their production environment!",
+    "Title": "List all expiring soon certificates in Azure Application Gateway",
+    "UpdatedDate": "2020-6-19T00:00:00",
+    "Url": "https://github.com/azureautomation/list-all-expiring-soon-certificates-in-azure-application-gateway",
+    "UserTags": "Microsoft Azure, Powershell, Audit"
+}

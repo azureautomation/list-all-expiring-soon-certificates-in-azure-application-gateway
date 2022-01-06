@@ -8,7 +8,7 @@ $iteration = 0
 $searchParams = @{
     Query = 'resources
     | where type =~ "Microsoft.Network/applicationGateways"
-    | extend ssl = parse_json(properties.sslCertificates)
+    | extend certs = parse_json(properties.sslCertificates)
     | join kind=inner (
         resourcecontainers
         | where type == "microsoft.resources/subscriptions"
@@ -32,7 +32,7 @@ $90daysfromNow = (Get-Date).AddDays($ExpiresInDays)
 $results | foreach-object {
     $record = $_
 
-    $record.ssl | foreach-object {
+    $record.certs | foreach-object {
         $sslCertRecord = $_
         $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($_.properties.publicCertData.Substring(60,$_.properties.publicCertData.Length-60)))
         if ($cert.NotAfter -le $90daysfromNow) {

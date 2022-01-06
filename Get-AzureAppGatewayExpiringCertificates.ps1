@@ -14,7 +14,7 @@ $searchParams = @{
         | where type == "microsoft.resources/subscriptions"
         | project subscriptionId, subscriptionName = name)
         on subscriptionId
-    | project name, subscriptionId, subscriptionName, resourceGroup, ssl
+    | project name, subscriptionName, resourceGroup, certs
     | order by name'
     First = $pageSize
 }
